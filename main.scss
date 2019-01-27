@@ -1,0 +1,237 @@
+// css reset
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// =========================================================
+
+// border box
+
+*,*:before, *:after{
+	box-sizing: border-box;
+}
+
+// =========================================================
+// general css
+// ===============================
+button, input {
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+::-webkit-input-placeholder{
+		color: rgba(0,0,0,0.2);
+	}
+
+// ===============================
+
+.page{
+	height: 100vh;
+
+	.primary-header{
+		text-align: center;
+		font-size: 100px;
+		font-style: italic;
+		color: rgba(230, 176, 170, 1);
+	}
+
+// ========================================
+ // todo input section
+// ========================================
+
+	.todo {
+		position: relative;
+		text-align: center;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: inline-block;
+		border : 0.5px solid rgba(0,0,0,0.04);
+		box-shadow: 1px 15px 60px 20px rgba(0,0,0,0.03);
+
+		.input-box {
+			padding: 16px 0;
+			border-bottom: 2px solid rgba(0,0,0,0.05);
+		}
+
+		.label {
+			font-size: 30px;
+			padding: 0 20px;
+			color: rgba(0,0,0,0.2);
+		}
+
+		.input {
+			width: 500px;
+			font-size: 30px;
+			color: #666;
+		}
+
+		.add {
+			font-size: 30px;
+			color: transparent;
+			cursor: pointer;
+			transition: color 1s ease-out;
+		}
+
+		.add:hover{
+			color: rgba(0,0,0,0.3);
+		}
+
+	}
+
+	// ========================================
+		// todo middle task list section
+	// ========================================
+
+	.task-list{
+		li {
+			position: relative;
+			text-align: left;
+			padding: 0 5px;
+			margin: 0;
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			vertical-align: middle;
+			width: 642px;
+		}
+
+		.todo-list {
+			align-items: center;
+
+			.todoText {
+				font-size: 30px;
+				color: #666;
+				padding: 20px;
+				width: 600px;
+				word-break: break-all;
+			}
+
+			.crossBtn {
+				font-size: 30px;
+				position: absolute;
+				right: 5%;
+				top: 50%;
+				color: rgba(230, 176, 170, 0);
+				color: transparent;
+				transform: translateY(-50%);
+				transition: color 1s ease-out;
+			}
+
+			.crossBtn:hover {
+				color: rgba(205, 97, 85, 1);
+			}
+
+// ========================================
+// circuler checkbox
+// ========================================
+			.roundCheckBox {
+		    width: 2.3em;
+		    height: 2.3em;
+		    background-color: white;
+		    border-radius: 50%;
+		    vertical-align: middle;
+		    border: 1px solid #ddd;
+		    -webkit-appearance: none;
+		    outline: none;
+		    cursor: pointer;
+			}
+
+			.roundCheckBox:checked {
+			  background: url(checkBox.svg);
+			  background-position: 80%, 50%;
+			}
+		}
+	}
+
+// ========================================
+		// todo footer list
+// ========================================
+	.list {
+		display:  flex;
+		list-style-type: none;
+		justify-content: space-between;
+		padding: 20px 10px;
+		
+		.list li {
+			font-size: 18px;
+			color: #666;
+		}
+
+		.li-btn {
+			border-radius: 3px;
+			font-size: 16px;
+			color: #666;
+			padding: 3px 5px;
+			margin: 0 5px;
+			cursor: pointer;
+			border: 0.5px solid transparent;
+		}
+
+		.li-btn:hover {
+			border: 0.5px solid rgba(175, 47, 47, 0.2);
+		}
+
+		.clear:hover {
+			text-decoration: underline;
+			cursor: pointer;
+			border: none;
+		}
+
+		// class for todo footer active clases
+		.activeListBorder {
+			border: 1px solid rgba(175, 47, 47, 0.2);
+		}
+	}	
+}
+// // round checkbox
+// input[type="checkbox"] {
+//   // visibility: hidden;
+//   height: 40px;
+//   height:40px;
+//   background-color: red;
+// }
